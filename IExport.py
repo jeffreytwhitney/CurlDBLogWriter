@@ -1,5 +1,6 @@
 import os
 from abc import ABC, abstractmethod
+from typing import List
 
 
 class ExportException(Exception):
@@ -8,37 +9,31 @@ class ExportException(Exception):
 
 class IExport(ABC):
     __file_path: str
+    __job_number: str
+    __part_number: str
+    __sequence_numbers: List[int] = []
 
     @abstractmethod
     def __init__(self, file_path: str):
         self.__file_path = file_path
 
     @property
-    @abstractmethod
-    def file_path(self):
+    def file_path(self) -> str:
         return self.__file_path
 
     @property
-    def file_name(self):
+    def file_name(self) -> str:
         return os.path.basename(self.__file_path)
 
     @property
-    @abstractmethod
-    def operation(self):
-        pass
+    def job_number(self) -> str:
+        return self.__job_number
 
     @property
-    @abstractmethod
-    def job_number(self):
-        pass
+    def part_number(self) -> str:
+        return self.__part_number
 
     @property
-    @abstractmethod
-    def part_number(self):
-        pass
-
-    @property
-    @abstractmethod
-    def sequence_number(self):
-        pass
+    def sequence_numbers(self) -> List[int]:
+        return self.__sequence_numbers
 
