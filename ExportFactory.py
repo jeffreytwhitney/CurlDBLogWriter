@@ -1,7 +1,9 @@
-from IExport import IExport
+from CMMExport import CMMExport
+from KeyenceExport import KeyenceExport
+from MicroVuExport import MicroVuExport
 
 
-def get_export(file_path: str) -> IExport:
+def get_export(file_path: str) -> CMMExport | KeyenceExport | MicroVuExport | None:
     if file_path.endswith(".csv"):
         from CMMExport import CMMExport
         return CMMExport(file_path)
@@ -11,3 +13,4 @@ def get_export(file_path: str) -> IExport:
     elif file_path.endswith(".pdf"):
         from MicroVuExport import MicroVuExport
         return MicroVuExport(file_path)
+    return None
