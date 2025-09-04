@@ -3,7 +3,7 @@ from abc import ABC, abstractmethod
 from typing import List
 
 
-class ExportException(Exception):
+class InvalidFileFormatException(Exception):
     pass
 
 

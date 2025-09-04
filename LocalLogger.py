@@ -14,7 +14,7 @@ def get_current_directory():
 
 def get_logger(logger_name) -> logging.Logger:
     logger = logging.getLogger(logger_name)
-    logger_level = INIConfig.GetStoredIniValue("Loggers", logger_name, "ScheduleImporter")
+    logger_level = INIConfig.GetStoredIniValue("Loggers", logger_name, "CurlDBLogWriter")
     if logger_level == "DEBUG":
         logger.setLevel(logging.DEBUG)
     else:
@@ -26,7 +26,7 @@ def get_logger(logger_name) -> logging.Logger:
     console_handler.setFormatter(formatter)
     logger.addHandler(console_handler)
 
-    file_handler = logging.FileHandler(get_current_directory() + "\\ScheduleRefreshLog.txt")
+    file_handler = logging.FileHandler(get_current_directory() + "\\CurlDBLogWriterLog.txt")
     if logger_level == "DEBUG":
         file_handler.setLevel(logging.DEBUG)
     else:
