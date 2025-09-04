@@ -8,32 +8,33 @@ class InvalidFileFormatException(Exception):
 
 
 class IExport(ABC):
-    __file_path: str
-    __job_number: str
-    __part_number: str
-    __sequence_numbers: List[int] = []
 
     @abstractmethod
     def __init__(self, file_path: str):
         self.__file_path = file_path
 
     @property
+    @abstractmethod
     def file_path(self) -> str:
-        return self.__file_path
+        pass
 
     @property
+    @abstractmethod
     def file_name(self) -> str:
-        return os.path.basename(self.__file_path)
+        pass
 
     @property
+    @abstractmethod
     def job_number(self) -> str:
-        return self.__job_number
+        pass
 
     @property
+    @abstractmethod
     def part_number(self) -> str:
-        return self.__part_number
+        pass
 
     @property
+    @abstractmethod
     def sequence_numbers(self) -> List[int]:
-        return self.__sequence_numbers
+        pass
 
