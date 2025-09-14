@@ -35,6 +35,6 @@ class IExport(ABC):
 
     @property
     @abstractmethod
-    def sequence_numbers(self) -> List[int]:
+    def sequence_numbers(self) -> list[int]:
         pass
 

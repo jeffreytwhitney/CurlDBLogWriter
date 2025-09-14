@@ -27,6 +27,7 @@ class MicroVuExport(IExport):
         self._parse_file_lines()
 
     def _parse_file_lines(self):
+        self._sequence_numbers.clear()
         self._part_number = get_node_text(self._file_lines, "Text PT: Text", "\"")
         self._job_number = get_node_text(self._file_lines, "Prompt JOB: Input", "\"")
         seq_nbr = get_node_text(self._file_lines, "Prompt SEQUENCE: Input", "\"")
@@ -56,3 +57,10 @@ class MicroVuExport(IExport):
     @property
     def sequence_numbers(self) -> list[int]:
         return self._sequence_numbers
+
+    def clear(self):
+        self._file_lines = []
+        self._sequence_numbers = []
+        self._part_number = ""
+        self._job_number = ""
+        self._file_path = ""

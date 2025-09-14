@@ -1,0 +1,6 @@
+Program name,Measurement time,Serial Counter,Judgment,Inspection Type,Job #,Employee #,Machine,Operation,INSP_42
+Design value,,,,,,,,,0.025000
+Upper Limit,,,,,,,,,1.000000
+Lower Limit,,,,,,,,,-1.000000
+100165732_E,7/1/2025 12:13:39 AM,0426,OK,IN PROCESS,29781600-005,4701,7803-25,10,0.025865
+100165732_E,7/1/2025 12:13:39 AM,0427,OK,IN PROCESS,29781600-005,4701,7803-25,10,0.025735

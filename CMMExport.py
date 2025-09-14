@@ -1,20 +1,27 @@
 import os
 
+import openpyxl
+
 from IExport import IExport
+from openpyxl import Workbook
 
 
 class CMMExport(IExport):
     _file_path: str
     _job_number: str
     _part_number: str
-    _sequence_numbers: list[int]
+    _sequence_numbers: list[int] = []
     _file_lines: list[str]
 
     def __init__(self, file_path: str):
         super().__init__(file_path)
-        self._job_number = "Fred"
-        self._part_number = "1"
-        self._sequence_numbers = [1, 2, 3]
+
+        self._file_path = file_path
+        xl_file = openpyxl.open(file_path)
+        ws = xl_file.active
+        self._part_number = ws['B2'].value
+        self._job_number = ws['C11'].value
+        self._sequence_numbers.append(int(ws['C12'].value))
 
     @property
     def file_path(self) -> str:
