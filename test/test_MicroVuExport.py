@@ -46,7 +46,7 @@ def test_bad_sequence_number_mv_export(mv_bad_sequence_number_path: str):
     assert bad_export.job_number == "8726476-002"
     assert bad_export.file_name == "MicroVuExport_BadSequenceNumber.csv"
     assert bad_export.part_number == "M002776C001"
-    assert 0 in bad_export.sequence_numbers
+    assert bad_export.sequence_numbers == [-1]
 
 
 def test_missing_sequence_number_mv_export(mv_missing_sequence_number_path: str):
@@ -54,4 +54,4 @@ def test_missing_sequence_number_mv_export(mv_missing_sequence_number_path: str)
     assert export.job_number == "8726476-002"
     assert export.file_name == "MicroVuExport_MissingSequenceNumber.csv"
     assert export.part_number == "M002776C001"
-    assert export.sequence_numbers == [0]
+    assert export.sequence_numbers == [-1]

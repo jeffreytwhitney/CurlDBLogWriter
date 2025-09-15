@@ -32,8 +32,8 @@ class MicroVuExport(IExport):
         self._job_number = get_node_text(self._file_lines, "Prompt JOB: Input", "\"")
         seq_nbr = get_node_text(self._file_lines, "Prompt SEQUENCE: Input", "\"")
         if seq_nbr == "":
-            if 0 not in self._sequence_numbers:
-                self._sequence_numbers.append(0)
+            if -1 not in self._sequence_numbers:
+                self._sequence_numbers.append(-1)
         else:
             if int(seq_nbr) not in self._sequence_numbers:
                 self._sequence_numbers.append(int(seq_nbr))

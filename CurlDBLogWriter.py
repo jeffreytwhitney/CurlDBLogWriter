@@ -32,8 +32,10 @@ if n > 1:
         sys.exit(2)
 
     IExport = ExportFactory.get_export(options.file_path)
-
-    DBLogWriter.write_log_entry(options.machine_name, options.status_code, options.error_message, IExport)
+    if options.error_message:
+        DBLogWriter.write_log_entry(options.machine_name, options.status_code, options.error_message, IExport)
+    else:
+        DBLogWriter.write_log_entry(options.machine_name, options.status_code, "", IExport)
 
     sys.exit(0)
 else:
