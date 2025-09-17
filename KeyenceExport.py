@@ -13,12 +13,12 @@ class KeyenceExport(IExport):
 
     def __init__(self, file_path: str):
         super().__init__(file_path)
+        self._sequence_numbers = []
         self._file_path = file_path
         self._file_lines = get_file_lines(file_path)
         self._parse_file_lines()
 
     def _parse_file_lines(self):
-        self._sequence_numbers.clear()
         line_count = len(self._file_lines)
         self._part_number = self._file_lines[4].split(",")[0]
         if "_" in self._part_number:

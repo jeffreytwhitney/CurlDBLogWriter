@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ErrorMessages>
+	<ErrorMessage mappingOrder="1">
+		<ErrorDisplayMessage>Balloon</ErrorDisplayMessage>
+		<ErrorDisplayRegexPattern>^PARSING.*has more places</ErrorDisplayRegexPattern>
+		<IsDefault>0</IsDefault>
+	</ErrorMessage>
+    <ErrorMessage mappingOrder="2">
+		<ErrorDisplayMessage>Balloon</ErrorDisplayMessage>
+		<ErrorDisplayRegexPattern>^PARSING.*all places must be either defined</ErrorDisplayRegexPattern>
+		<IsDefault>0</IsDefault>
+	</ErrorMessage>
+    <ErrorMessage mappingOrder="3">
+		<ErrorDisplayMessage>CMM file could not be parsed or does not match the inspection plan. Make sure all specs in the plan match the CMM output.</ErrorDisplayMessage>
+		<ErrorDisplayRegexPattern>^PARSING.*file could not be parsed</ErrorDisplayRegexPattern>
+		<IsDefault>0</IsDefault>
+	</ErrorMessage>
+	<ErrorMessage mappingOrder="4">
+		<ErrorDisplayMessage>CMM file could not be parsed or does not match the inspection plan. Make sure all specs in the plan match the CMM output.</ErrorDisplayMessage>
+		<ErrorDisplayRegexPattern>^PARSING.*file could not be parsed</ErrorDisplayRegexPattern>
+		<IsDefault>0</IsDefault>
+	</ErrorMessage>
+	<ErrorMessage mappingOrder="5">
+		<ErrorDisplayMessage>CMM file does nor match selected inspection or balloon numbers are missing.</ErrorDisplayMessage>
+		<ErrorDisplayRegexPattern>^PARSING.*file does not match selected inspection</ErrorDisplayRegexPattern>
+		<IsDefault>0</IsDefault>
+	</ErrorMessage>
+	<ErrorMessage mappingOrder="6">
+		<ErrorDisplayMessage>Inspection is Read Only</ErrorDisplayMessage>
+		<ErrorDisplayRegexPattern>^HEADER: Inspection is Read Only</ErrorDisplayRegexPattern>
+		<IsDefault>0</IsDefault>
+	</ErrorMessage>
+	<ErrorMessage mappingOrder="7">
+		<ErrorDisplayMessage>Inspection Not Found</ErrorDisplayMessage>
+		<ErrorDisplayRegexPattern>^HEADER: Inspection Not Found</ErrorDisplayRegexPattern>
+		<IsDefault>0</IsDefault>
+	</ErrorMessage>
+	<ErrorMessage mappingOrder="8">
+		<ErrorDisplayMessage>Invalid Inspection Type</ErrorDisplayMessage>
+		<ErrorDisplayRegexPattern>^HEADER: Invalid Inspection Type</ErrorDisplayRegexPattern>
+		<IsDefault>0</IsDefault>
+	</ErrorMessage>
+	<ErrorMessage mappingOrder="9">
+		<ErrorDisplayMessage>Invalid Program Name</ErrorDisplayMessage>
+		<ErrorDisplayRegexPattern>^HEADER: Invalid Program Name</ErrorDisplayRegexPattern>
+		<IsDefault>0</IsDefault>
+	</ErrorMessage>
+	<ErrorMessage mappingOrder="10">
+		<ErrorDisplayMessage>Job Not Defined</ErrorDisplayMessage>
+		<ErrorDisplayRegexPattern>^HEADER: Job Not Defined</ErrorDisplayRegexPattern>
+		<IsDefault>0</IsDefault>
+	</ErrorMessage>
+	<ErrorMessage mappingOrder="11">
+		<ErrorDisplayMessage>Multiple Inspections Found</ErrorDisplayMessage>
+		<ErrorDisplayRegexPattern>^HEADER: Multiple Inspections Found</ErrorDisplayRegexPattern>
+		<IsDefault>0</IsDefault>
+	</ErrorMessage>
+	<ErrorMessage mappingOrder="12">
+		<ErrorDisplayMessage>Plan Not Found</ErrorDisplayMessage>
+		<ErrorDisplayRegexPattern>^HEADER: Plan Not Found</ErrorDisplayRegexPattern>
+		<IsDefault>0</IsDefault>
+	</ErrorMessage>
+	<ErrorMessage mappingOrder="13">
+		<ErrorDisplayMessage>Program/Plan Not Defined</ErrorDisplayMessage>
+		<ErrorDisplayRegexPattern>^HEADER: Program/Plan Not Defined</ErrorDisplayRegexPattern>
+		<IsDefault>0</IsDefault>
+	</ErrorMessage>
+	<ErrorMessage mappingOrder="14">
+		<ErrorDisplayMessage>Sequence must be greater or equal to 1.</ErrorDisplayMessage>
+		<ErrorDisplayRegexPattern>^HEADER: Sequence must be greater or equal to 1.</ErrorDisplayRegexPattern>
+		<IsDefault>0</IsDefault>
+	</ErrorMessage>
+	<ErrorMessage mappingOrder="15">
+		<ErrorDisplayMessage>Sequence Not Defined</ErrorDisplayMessage>
+		<ErrorDisplayRegexPattern>^HEADER: Sequence Not Defined</ErrorDisplayRegexPattern>
+		<IsDefault>0</IsDefault>
+	</ErrorMessage>
+	<ErrorMessage mappingOrder="16">
+		<ErrorDisplayMessage>Sequence must be less than 10000</ErrorDisplayMessage>
+		<ErrorDisplayRegexPattern>^Sequence must be less than 10000</ErrorDisplayRegexPattern>
+		<IsDefault>0</IsDefault>
+	</ErrorMessage>
+	<ErrorMessage mappingOrder="17">
+		<ErrorDisplayMessage>Unsupported extension: CMM file must be in .sta format</ErrorDisplayMessage>
+		<ErrorDisplayRegexPattern>^HEADER.*file must be in .sta format</ErrorDisplayRegexPattern>
+		<IsDefault>0</IsDefault>
+	</ErrorMessage>
+	<ErrorMessage mappingOrder="18">
+		<ErrorDisplayMessage>Unknown Parsing Error</ErrorDisplayMessage>
+		<ErrorDisplayRegexPattern>^PARSING</ErrorDisplayRegexPattern>
+		<IsDefault>0</IsDefault>
+	</ErrorMessage>
+	<ErrorMessage mappingOrder="19">
+		<ErrorDisplayMessage>Unknown Header Error</ErrorDisplayMessage>
+		<ErrorDisplayRegexPattern>^HEADER</ErrorDisplayRegexPattern>
+		<IsDefault>0</IsDefault>
+	</ErrorMessage>
+	<ErrorMessage mappingOrder="99">
+		<ErrorDisplayMessage>Unknown Error</ErrorDisplayMessage>
+		<ErrorDisplayRegexPattern>^(?!.*\b(?:PARSING|HEADER)\b).*</ErrorDisplayRegexPattern>
+		<IsDefault>1</IsDefault>
+	</ErrorMessage>
+</ErrorMessages>

@@ -22,12 +22,12 @@ class MicroVuExport(IExport):
 
     def __init__(self, file_path: str):
         super().__init__(file_path)
+        self._sequence_numbers = []
         self._file_path = file_path
         self._file_lines = get_file_lines(file_path)
         self._parse_file_lines()
 
     def _parse_file_lines(self):
-        self._sequence_numbers.clear()
         self._part_number = get_node_text(self._file_lines, "Text PT: Text", "\"")
         self._job_number = get_node_text(self._file_lines, "Prompt JOB: Input", "\"")
         seq_nbr = get_node_text(self._file_lines, "Prompt SEQUENCE: Input", "\"")

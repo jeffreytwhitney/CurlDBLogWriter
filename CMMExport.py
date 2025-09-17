@@ -15,7 +15,7 @@ class CMMExport(IExport):
 
     def __init__(self, file_path: str):
         super().__init__(file_path)
-
+        self._file_lines = []
         self._file_path = file_path
         xl_file = openpyxl.open(file_path)
         ws = xl_file.active

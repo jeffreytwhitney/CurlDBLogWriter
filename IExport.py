@@ -13,6 +13,7 @@ class IExport(ABC):
     def __init__(self, file_path: str):
         self.__file_path = file_path
 
+
     @property
     @abstractmethod
     def file_path(self) -> str:
