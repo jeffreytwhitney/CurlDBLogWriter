@@ -16,6 +16,10 @@ if n > 1:
     opt_parser.add_option("-e", "--errmsg", dest="error_message", help="Error message (optional)")
     opt_parser.add_option("-m", "--machinename", dest="machine_name", help="Machine name (required)")
     (options, args) = opt_parser.parse_args()
+    error_display_message = options.error_message
+    for arg in args:
+        if "BALLOON" in arg.upper():
+            error_display_message = error_display_message + arg
 
     # Validate required arguments
     missing = []
@@ -32,8 +36,9 @@ if n > 1:
         sys.exit(2)
 
     IExport = ExportFactory.get_export(options.file_path)
+
     if options.error_message:
-        DBLogWriter.write_log_entry(options.machine_name, options.status_code, options.error_message, IExport)
+        DBLogWriter.write_log_entry(options.machine_name, options.status_code, error_display_message, IExport)
     else:
         DBLogWriter.write_log_entry(options.machine_name, options.status_code, "", IExport)
 

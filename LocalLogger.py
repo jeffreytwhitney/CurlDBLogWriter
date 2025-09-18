@@ -26,6 +26,7 @@ def get_logger(logger_name) -> logging.Logger:
     console_handler.setFormatter(formatter)
     logger.addHandler(console_handler)
 
+
     file_handler = logging.FileHandler(get_current_directory() + "\\CurlDBLogWriterLog.txt")
     if logger_level == "DEBUG":
         file_handler.setLevel(logging.DEBUG)
